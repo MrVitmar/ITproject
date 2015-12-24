@@ -1,0 +1,32 @@
+$(document).ready(function () {
+
+    var moviesFeedback = {
+
+        submitForm: $('#movie-feedback-form'),
+        apiHost: 'https://api.parse.com/1/',
+        apiAppId: '8V1SzXwjmJC1BHXqlYXVuD1pPn0Di4FdxGEUY1N7',
+        apiJSId: 'Xq9y1XH9TEWai2mC7XwRQdlVdWPILnTXnINwbEBa',
+
+        init: function () {
+            console.debug('Movies feedback page initialization started...');
+            moviesFeedback.populateFormWithTestData();
+            moviesFeedback.bindEventHandlers();
+
+            moviesFeedback.displayRecommendationsOnPage();
+        },
+
+        bindEventHandlers: function () {
+
+            $('#movie-feedback-form').submit(function (event) {
+            event.preventDefault();
+            console.info('Going tu submit ')
+
+            });
+
+        },
+    };
+
+    moviesFeedback.init();
+});
+       
+           
